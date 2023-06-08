@@ -1,0 +1,39 @@
+<div>
+
+    <div class="row">
+        <h1>Sample example of Autocomplete component</h1>
+        <div>
+            <form class="example-forms">
+                <mat-form-field>
+                    <input matInput [matAutocomplete]="auto1">
+                    <mat-autocomplete #auto1 autoActiveFirstOption>
+                        <mat-option *ngFor="let days of weekdays" [value]="days">{{days}}</mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+
+        </div>
+        <div class="row">
+            <h3>Autocomplete with search</h3>
+            <form class="example-forms">
+                <mat-form-field>
+                    <input matInput [matAutocomplete]="auto2" [formControl]="formControl">
+                    <mat-autocomplete #auto2 autoActiveFirstOption>
+                        <mat-option *ngFor="let days of filterDataObserval | async" [value]="days">{{days}}</mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+        </div>
+
+        <div class="row">
+            <h3>Autocomplete search with service call</h3>
+            <form class="example-forms">
+                <mat-form-field>
+                    <input matInput [matAutocomplete]="auto3" [formControl]="formControl">
+                    <mat-autocomplete #auto3 autoActiveFirstOption>
+                        <mat-option *ngFor="let days of filterDataListObserval | async" [value]="days.code">{{days.code}} - {{days.name}}</mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
