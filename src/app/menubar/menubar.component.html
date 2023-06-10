@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" class="mat-elevation-z7">
+    <button routerLink="" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Material UI</span>
+    <span class="spacer"></span>
+    <button routerLink="" mat-button>Home</button>
+
+    <button mat-button [mat-menu-trigger-for]="lvl1University">University</button>
+    <mat-menu #lvl1University="matMenu">
+        <button [mat-menu-trigger-for]="college" mat-menu-item>College</button>
+        <button [mat-menu-trigger-for]="branch" mat-menu-item>Branch</button>
+        <button [mat-menu-trigger-for]="campus" mat-menu-item>Campus</button>
+        <button [mat-menu-trigger-for]="admition" mat-menu-item>Addmition</button>
+    </mat-menu>
+
+    <mat-menu #college="matMenu">
+        <button mat-menu-item>Private</button>
+        <button mat-menu-item>Semi Private</button>
+        <button mat-menu-item>Self finance University</button>
+        <button mat-menu-item>Autonomus</button>
+        <button [mat-menu-trigger-for]="govtCollege" mat-menu-item>Under GOVT</button>
+    </mat-menu>
+    <mat-menu #govtCollege="matMenu">
+        <button mat-menu-item>JEC</button>
+        <button mat-menu-item>SATI</button>
+        <button mat-menu-item>DAAV</button>
+        <button routerLink="autocomplete" mat-menu-item>RGPV</button>
+    </mat-menu>
+
+    <mat-menu #branch="matMenu">
+        <button mat-menu-item>Singrauli</button>
+        <button mat-menu-item>Delhi</button>
+        <button mat-menu-item>Pune</button>
+        <button mat-menu-item>Bangalore</button>
+    </mat-menu>
+
+    <mat-menu #campus="matMenu">
+        <button mat-menu-item>Singrauli West</button>
+        <button mat-menu-item>Delhi South</button>
+        <button mat-menu-item>Pune, HNJ</button>
+        <button mat-menu-item>Bangalore, EC</button>
+    </mat-menu>
+
+    <mat-menu #admition="matMenu">
+        <button mat-menu-item>Singrauli - Open</button>
+        <button mat-menu-item>Delhi South - Open</button>
+        <button mat-menu-item>Pune, HNJ - Open</button>
+        <button mat-menu-item>Bangalore, EC - Open</button>
+    </mat-menu>
+
+    <button routerLink="button" mat-button>Buttons</button>
+    <button routerLink="autocomplete" mat-button>Autocomplete</button>
+    <button mat-raised-button>Signin</button>
+
+</mat-toolbar>

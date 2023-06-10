@@ -31,7 +31,8 @@
                 <mat-form-field>
                     <input matInput [matAutocomplete]="auto3" [formControl]="formControl">
                     <mat-autocomplete #auto3 autoActiveFirstOption>
-                        <mat-option *ngFor="let days of filterDataListObserval | async" [value]="days.code">{{days.code}} - {{days.name}}</mat-option>
+                        <mat-option *ngFor="let days of filterDataListObserval | async"
+                            [value]="days.code">{{days.code}} - {{days.name}}</mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
             </form>
