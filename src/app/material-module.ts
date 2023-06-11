@@ -7,6 +7,7 @@ import {MatIconModule} from "@angular/material/icon"
 import {MatDividerModule} from "@angular/material/divider"
 import {MatToolbarModule} from "@angular/material/toolbar"
 import {MatMenuModule} from "@angular/material/menu"
+import {MatBadgeModule} from "@angular/material/badge"
 
  //Custome Material Components
 @NgModule({
@@ -18,7 +19,8 @@ import {MatMenuModule} from "@angular/material/menu"
        MatIconModule,
        MatDividerModule,
        MatToolbarModule,
-       MatMenuModule
+       MatMenuModule,
+       MatBadgeModule
     ]
 })
 export class MaterialModule{

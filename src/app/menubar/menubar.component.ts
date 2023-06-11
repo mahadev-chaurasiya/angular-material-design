@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MenubarComponent {
 
+  showBadges = false;
+
+  badges(){
+    this.showBadges = true;
+  }
+
 }

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="mat-elevation-z7">
     <button routerLink="" mat-icon-button>
-        <mat-icon>menu</mat-icon>
+        <mat-icon>home</mat-icon>
     </button>
     <span>Material UI</span>
     <span class="spacer"></span>
@@ -52,5 +52,8 @@
     <button routerLink="button" mat-button>Buttons</button>
     <button routerLink="autocomplete" mat-button>Autocomplete</button>
     <button mat-raised-button>Signin</button>
-
+    <button mat-icon-button (click)="badges()">
+        <mat-icon matBadge="10" [matBadgeHidden]="showBadges" 
+        matBadgeSize="medium" matBadgeColor="warn">notification_important</mat-icon>
+    </button>
 </mat-toolbar>
