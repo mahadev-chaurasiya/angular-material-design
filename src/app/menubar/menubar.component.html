@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="mat-elevation-z7">
-    <button routerLink="" mat-icon-button>
+    <button (click)="drawer.toggle()" mat-icon-button>
         <mat-icon>home</mat-icon>
     </button>
     <span>Material UI</span>
@@ -57,3 +57,30 @@
         matBadgeSize="medium" matBadgeColor="warn">notification_important</mat-icon>
     </button>
 </mat-toolbar>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="false" mode="side" position="start">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>settings</mat-icon>Settings</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>notifications</mat-icon>Notification</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>help</mat-icon>Help Desk</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>contacts</mat-icon>Contact Us</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <div style="text-align: center; min-height: 600px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
