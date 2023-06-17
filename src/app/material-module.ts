@@ -10,6 +10,7 @@ import {MatMenuModule} from "@angular/material/menu"
 import {MatBadgeModule} from "@angular/material/badge"
 import {MatSidenavModule} from "@angular/material/sidenav"
 import {MatListModule} from "@angular/material/list"
+import {MatCardModule} from "@angular/material/card"
 
  //Custome Material Components
 @NgModule({
@@ -24,7 +25,8 @@ import {MatListModule} from "@angular/material/list"
        MatMenuModule,
        MatBadgeModule,
        MatSidenavModule,
-       MatListModule
+       MatListModule,
+       MatCardModule
     ]
 })
 export class MaterialModule{

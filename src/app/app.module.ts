@@ -9,13 +9,15 @@ import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
+import { CardComponent } from './card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
     AutoCompleteComponent,
     MenubarComponent,
     ButtonComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

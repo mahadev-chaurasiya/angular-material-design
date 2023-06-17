@@ -5,7 +5,7 @@
     <span>Material UI</span>
     <span class="spacer"></span>
     <button routerLink="" mat-button>Home</button>
-
+    <button routerLink="card" mat-button>Card</button>
     <button mat-button [mat-menu-trigger-for]="lvl1University">University</button>
     <mat-menu #lvl1University="matMenu">
         <button [mat-menu-trigger-for]="college" mat-menu-item>College</button>
@@ -58,10 +58,10 @@
     </button>
 </mat-toolbar>
 <mat-drawer-container autosize>
-    <mat-drawer #drawer opened="false" mode="side" position="start">
+    <mat-drawer #drawer opened="true" mode="side" position="start">
         <mat-nav-list>
             <mat-list-item>
-                <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
+                <button routerLink="card" mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button><mat-icon>settings</mat-icon>Settings</button>
