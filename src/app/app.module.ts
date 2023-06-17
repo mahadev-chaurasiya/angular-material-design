@@ -10,6 +10,8 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
+import { SliderComponent } from './slider/slider.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +19,15 @@ import { CardComponent } from './card/card.component';
     MenubarComponent,
     ButtonComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

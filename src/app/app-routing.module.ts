@@ -5,13 +5,14 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
+import { SliderComponent } from './slider/slider.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'autocomplete', component: AutoCompleteComponent },
   { path: 'button', component: ButtonComponent },
-  { path: 'card', component: CardComponent }
-
+  { path: 'card', component: CardComponent },
+  { path: 'slider', component: SliderComponent },
 ];
 
 @NgModule({
