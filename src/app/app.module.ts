@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     HomeComponent,
     CardComponent,
-    SliderComponent
+    SliderComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

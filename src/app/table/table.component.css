@@ -1,0 +1,13 @@
+mat-card{
+    margin: 2%;
+    width: 100%;
+}
+button{
+    margin: 3%;
+}
+table{
+    width: 100%;
+}
+mat-paginator{
+    align-items: center;
+}

@@ -6,6 +6,7 @@ import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'button', component: ButtonComponent },
   { path: 'card', component: CardComponent },
   { path: 'slider', component: SliderComponent },
+  { path: 'table', component: TableComponent }
 ];
 
 @NgModule({
