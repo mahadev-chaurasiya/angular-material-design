@@ -3,6 +3,7 @@ import { ProductService } from '../service/product.service';
 import { Product } from '../entity/product';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-table',
@@ -13,10 +14,12 @@ export class TableComponent {
 
   productList!: Product[];
   productDataSource: any;
-  productDisplayColumnName: string[] = ["Action", "Product Id", "Product Name", "Product Qty.",
-    "Product Description", "Product Price", "Product Size", "Product Coupon Code",
-    "Product Rating", "Product Type", "Product Dsicount"];
-    @ViewChild(MatPaginator) paginator!: MatPaginator;
+  productDisplayColumnName: string[] = ["Action","Id", "Name", "Qty",
+    "Description", "Price", "Size", "Discount Code",
+    "Rating", "Type", "Discount"];
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort !: MatSort;
+
 
   constructor(private service: ProductService) {
     this.service.GetProductDetail().subscribe(res => {
@@ -24,6 +27,14 @@ export class TableComponent {
       console.log("Product service : ", this.productList);
       this.productDataSource = new MatTableDataSource<Product>(this.productList);
       this.productDataSource.paginator = this.paginator;
+      this.productDataSource.sort = this.sort;
     });
+  }
+
+  filterItem(e: Event){
+    const txt = (e.target as HTMLInputElement).value;
+    console.log(txt);
+    this.productDataSource = txt;
+    console.log(this.productDataSource);
   }
 }
